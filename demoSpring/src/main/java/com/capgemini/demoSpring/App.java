@@ -8,9 +8,9 @@ import com.capgemini.beans.*;
 public class App {
 	public static void main(String[] args) {
 		
-		HolaMundo m = new HolaMundo();
-		m.setSaludo("Eseeee");
-		System.out.println(m.getSaludo());
+//		HolaMundo m = new HolaMundo();
+//		m.setSaludo("Eseeee");
+//		System.out.println(m.getSaludo());
 
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
 

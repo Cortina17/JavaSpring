@@ -2,7 +2,7 @@ package com.capgemini.beans;
 
 public class HolaMundo {
 	
-	private String saludo;
+	private String saludo = "Eseeeeeeeeeee";
 
 	public String getSaludo() {
 		return saludo;
