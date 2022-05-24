@@ -1,8 +1,11 @@
 package com.capgemini.beans;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class HolaMundo {
-	
-	private String saludo = "Eseeeeeeeeeee";
+
+	@Value("Hola Asturias")
+	private String saludo; //= "Eseeeeeeeeeee";
 
 	public String getSaludo() {
 		return saludo;
