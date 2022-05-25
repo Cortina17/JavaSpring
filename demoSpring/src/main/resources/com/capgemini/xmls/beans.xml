@@ -27,7 +27,20 @@
 	<!-- <constructor-arg value="1"></constructor-arg> -->
 	<!-- </bean> -->
 
-	<!-- 	<bean id="persona" class="com.capgemini.beans.Persona"> -->
-	<!-- 		<constructor-arg type="int" value="1"></constructor-arg> -->
-	<!-- 	</bean> -->
+	<!-- <bean id="persona" class="com.capgemini.beans.Persona"> -->
+	<!-- <constructor-arg type="int" value="1"></constructor-arg> -->
+	<!-- </bean> -->
+
+	<bean id="persona" class="com.capgemini.beans.Persona">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Joe"></property>
+		<property name="apodo" value="J"></property>
+		<property name="pais" ref="pais"></property>
+	</bean>
+
+	<bean id="pais" class="com.capgemini.beans.Pais">
+		<property name="nombre" value="Suecia"></property>
+	</bean>
+
+
 </beans>

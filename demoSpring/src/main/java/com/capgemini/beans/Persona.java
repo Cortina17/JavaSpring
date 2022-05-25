@@ -5,7 +5,8 @@ public class Persona {
 	private int id;
 	private String nombre;
 	private String apodo;
-	
+	private Pais pais;
+
 	public Persona() {};
 
 	public Persona(int id, String nombre, String apodo) {
@@ -13,12 +14,12 @@ public class Persona {
 		this.nombre = nombre;
 		this.apodo = apodo;
 	}
-	
-	public Persona (int id) {
+
+	public Persona(int id) {
 		this.id = id;
 	}
-	
-	public Persona (String apodo) {
+
+	public Persona(String apodo) {
 		this.apodo = apodo;
 	}
 
@@ -44,5 +45,13 @@ public class Persona {
 
 	public void setApodo(String apodo) {
 		this.apodo = apodo;
+	}
+
+	public Pais getPais() {
+		return pais;
+	}
+
+	public void setPais(Pais pais) {
+		this.pais = pais;
 	}
 }
