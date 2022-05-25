@@ -12,6 +12,12 @@
 	<!-- </bean> -->
 
 	<!-- <bean id="persona" class="com.capgemini.beans.Persona"> -->
+	<!-- <constructor-arg type = "int" index ="0" value="1"></constructor-arg> -->
+	<!-- <constructor-arg type = "String" index = "2" value="Phill"></constructor-arg> -->
+	<!-- <constructor-arg type = "String" index = "1" value="Phillip"></constructor-arg> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="persona" class="com.capgemini.beans.Persona"> -->
 	<!-- <constructor-arg value="1"></constructor-arg> -->
 	<!-- <constructor-arg value="Phillip"></constructor-arg> -->
 	<!-- <constructor-arg value="Phill"></constructor-arg> -->
