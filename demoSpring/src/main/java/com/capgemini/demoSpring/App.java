@@ -18,11 +18,11 @@ public class App {
 
 		Persona p = (Persona) appContext.getBean("persona");
 
-		System.out.println("El Nro de la persona es el " + p.getId() + ", su nombre es " + p.getNombre() + " y su apodo es " + p.getApodo() + "." );
+		System.out.println("El Nro de la persona es el " + p.getId() + ", su nombre es " + p.getNombre()
+				+ ", su apodo es " + p.getApodo() + " y su pais es: " + p.getPais().getNombre() + ".");
 
 		((ConfigurableApplicationContext) appContext).close();
 	}
-
 
 	public static void main2(String[] args) {
 

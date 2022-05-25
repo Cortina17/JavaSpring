@@ -17,11 +17,11 @@
 	<!-- <constructor-arg type = "String" index = "1" value="Phillip"></constructor-arg> -->
 	<!-- </bean> -->
 
-	<bean id="persona" class="com.capgemini.beans.Persona">
-		<constructor-arg value="1"></constructor-arg>
-		<constructor-arg value="Phillip"></constructor-arg>
-		<constructor-arg value="Phill"></constructor-arg>
-	</bean>
+<!-- 	<bean id="persona" class="com.capgemini.beans.Persona"> -->
+<!-- 		<constructor-arg value="1"></constructor-arg> -->
+<!-- 		<constructor-arg value="Phillip"></constructor-arg> -->
+<!-- 		<constructor-arg value="Phill"></constructor-arg> -->
+<!-- 	</bean> -->
 
 	<!-- <bean id="persona" class="com.capgemini.beans.Persona"> -->
 	<!-- <constructor-arg value="1"></constructor-arg> -->
@@ -41,6 +41,5 @@
 	<bean id="pais" class="com.capgemini.beans.Pais">
 		<property name="nombre" value="Suecia"></property>
 	</bean>
-
 
 </beans>
