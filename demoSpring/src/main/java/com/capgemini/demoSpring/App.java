@@ -18,9 +18,9 @@ public class App {
 
 		Persona p = (Persona) appContext.getBean("persona");
 
-		System.out.println("El Nro de la persona es el " + p.getId() + ", su nombre es " + p.getNombre()
+		System.out.println("El ID de la persona es el " + p.getId() + ", su nombre es " + p.getNombre()
 				+ ", su apodo es " + p.getApodo() + ",\n su pais es " + p.getPais().getNombre()
-				+ ", pero su ciudad favorita es " + p.getPais().getCiudad().getNombre() + ".");
+				+ ", y vive en " + p.getPais().getCiudad().getNombre() + ".");
 
 		((ConfigurableApplicationContext) appContext).close();
 	}

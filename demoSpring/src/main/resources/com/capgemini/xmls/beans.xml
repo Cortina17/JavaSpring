@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="mundo" class="com.capgemini.beans.HolaMundo"></bean>
+	<!-- <bean id="mundo" class="com.capgemini.beans.HolaMundo"></bean> -->
 
 	<!-- <bean id="persona" class="com.capgemini.beans.Persona" -->
 	<!-- <property name="id" value="1"></property> -->
@@ -31,19 +31,35 @@
 	<!-- <constructor-arg type="int" value="1"></constructor-arg> -->
 	<!-- </bean> -->
 
+	<!-- <bean id="persona" class="com.capgemini.beans.Persona"> -->
+	<!-- <property name="id" value="1"></property> -->
+	<!-- <property name="nombre" value="Joe"></property> -->
+	<!-- <property name="apodo" value="J"></property> -->
+	<!-- <property name="pais" ref="pais"></property> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="pais" class="com.capgemini.beans.Pais"> -->
+	<!-- <property name="nombre" value="Suecia"></property> -->
+	<!-- <property name="ciudad" ref="ciudad"></property> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="ciudad" class="com.capgemini.beans.Ciudad"> -->
+	<!-- <property name="nombre" value="Dublin"></property> -->
+	<!-- </bean> -->
+
 	<bean id="persona" class="com.capgemini.beans.Persona">
 		<property name="id" value="1"></property>
 		<property name="nombre" value="Joe"></property>
 		<property name="apodo" value="J"></property>
-		<property name="pais" ref="pais"></property>
-	</bean>
-
-	<bean id="pais" class="com.capgemini.beans.Pais">
-		<property name="nombre" value="Suecia"></property>
-		<property name="ciudad" ref="ciudad"></property>
-	</bean>
-
-	<bean id="ciudad" class="com.capgemini.beans.Ciudad">
-		<property name="nombre" value="Dublin"></property>
+		<property name="pais">
+			<bean id="pais" class="com.capgemini.beans.Pais">
+				<property name="nombre" value="Suecia"></property>
+				<property name="ciudad">
+					<bean id="ciudad" class="com.capgemini.beans.Ciudad">
+						<property name="nombre" value="Estocolmo"></property>
+					</bean>
+				</property>
+			</bean>
+		</property>
 	</bean>
 </beans>
