@@ -5,10 +5,15 @@
 
 	<bean id="mundo" class="com.capgemini.beans.HolaMundo"></bean>
 
-	<bean id="persona" class="com.capgemini.beans.Persona">
-		<property name="id" value="1"></property>
-		<property name="nombre" value="Joe"></property>
-		<property name="apodo" value="J"></property>
-	</bean>
+	<!-- <bean id="persona" class="com.capgemini.beans.Persona" -->
+	<!-- <property name="id" value="1"></property> -->
+	<!-- <property name="nombre" value="Joe"></property> -->
+	<!-- <property name="apodo" value="J"></property> -->
+	<!-- </bean> -->
 
+	<bean id="persona" class="com.capgemini.beans.Persona">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="Phillip"></constructor-arg>
+		<constructor-arg value="Phill"></constructor-arg>
+	</bean>
 </beans>
