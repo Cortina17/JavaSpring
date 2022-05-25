@@ -3,20 +3,38 @@ package com.capgemini.demoSpring;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.capgemini.beans.AppConfig;
 import com.capgemini.beans.AppConfig2;
 import com.capgemini.beans.HolaMundo;
+import com.capgemini.beans.Persona;
 
 public class App {
+
 	public static void main(String[] args) {
 
-		AnnotationConfigApplicationContext appContext2 = new AnnotationConfigApplicationContext(AppConfig.class, AppConfig2.class);
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
+
+		Persona p = (Persona) appContext.getBean("persona");
+
+		System.out.println(p.getNombre() + " y su apodo es " + p.getApodo());
+
+		((ConfigurableApplicationContext) appContext).close();
+	}
+
+
+	public static void main2(String[] args) {
+
+		AnnotationConfigApplicationContext appContext2 = new AnnotationConfigApplicationContext(AppConfig.class,
+				AppConfig2.class);
+
 		appContext2.register(AppConfig.class);
 		appContext2.register(AppConfig2.class);
-		
+
 		HolaMundo hola = (HolaMundo) appContext2.getBean("mundo");
 		HolaMundo hola3 = (HolaMundo) appContext2.getBean("marte");
-		
+
 		System.out.println(hola.getSaludo());
 		System.out.println(hola3.getSaludo());
 

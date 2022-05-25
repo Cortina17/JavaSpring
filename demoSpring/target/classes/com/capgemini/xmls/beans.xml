@@ -4,6 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="mundo" class="com.capgemini.beans.HolaMundo"></bean>
-	<bean id="marte" class="com.capgemini.beans.HolaMundo"></bean>
+
+	<bean id="persona" class="com.capgemini.beans.Persona">
+		<property name="id" value="1"></property>
+		<property name="nombre" value="Joe"></property>
+		<property name="apodo" value="J"></property>
+	</bean>
 
 </beans>

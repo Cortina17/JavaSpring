@@ -10,5 +10,10 @@ public class AppConfig {
 	public HolaMundo mundo() {
 		return new HolaMundo();
 	}
+	
+	@Bean
+	public Persona persona() {
+		return new Persona();
+	}
 
 }
