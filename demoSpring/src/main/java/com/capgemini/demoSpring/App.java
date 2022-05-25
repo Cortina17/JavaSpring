@@ -7,18 +7,37 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.capgemini.beans.AppConfig;
 import com.capgemini.beans.AppConfig2;
+import com.capgemini.beans.Ciudad;
 import com.capgemini.beans.HolaMundo;
 import com.capgemini.beans.Persona;
 
 public class App {
-
 	public static void main(String[] args) {
 
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
 
 		Persona p = (Persona) appContext.getBean("persona");
+		String nombreCiudades = "";
 
-		System.out.println("(By ID del bean) El ID de la persona es el " + p.getId() + ", su nombre es " + p.getNombre()
+		for (Ciudad ciu : p.getPais().getCiudades()) {
+			nombreCiudades += ciu.getNombre() + ", ";
+
+		}
+
+		System.out.println("El ID de la persona es el " + p.getId() + ", su nombre es " + p.getNombre()
+				+ ", su apodo es " + p.getApodo() + ",\n su pais es " + p.getPais().getNombre() + ", y vive en "
+				+ nombreCiudades + ".");
+
+		((ConfigurableApplicationContext) appContext).close();
+	}
+
+	public static void main3(String[] args) {
+
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
+
+		Persona p = (Persona) appContext.getBean("persona");
+
+		System.out.println("(By ID del bean)El ID de la persona es el " + p.getId() + ", su nombre es " + p.getNombre()
 				+ ", su apodo es " + p.getApodo() + ",\n su pais es " + p.getPais().getNombre() + ", y vive en "
 				+ p.getPais().getCiudad().getNombre() + ".");
 
@@ -30,9 +49,9 @@ public class App {
 
 		Persona p3 = (Persona) appContext.getBean("personaAlias");
 
-		System.out.println("(By name tag en el bean) El ID de la persona es el " + p3.getId() + ", su nombre es " + p3.getNombre()
-				+ ", su apodo es " + p3.getApodo() + ",\n su pais es " + p3.getPais().getNombre() + ", y vive en "
-				+ p3.getPais().getCiudad().getNombre() + ".");
+		System.out.println("(By name tag en el bean) El ID de la persona es el " + p3.getId() + ", su nombre es "
+				+ p3.getNombre() + ", su apodo es " + p3.getApodo() + ",\n su pais es " + p3.getPais().getNombre()
+				+ ", y vive en " + p3.getPais().getCiudad().getNombre() + ".");
 
 		((ConfigurableApplicationContext) appContext).close();
 	}

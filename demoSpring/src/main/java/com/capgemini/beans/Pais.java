@@ -1,9 +1,20 @@
 package com.capgemini.beans;
 
+import java.util.List;
+
 public class Pais {
 
 	private String nombre;
 	private Ciudad ciudad;
+	private List <Ciudad> ciudades;
+	
+	public List<Ciudad> getCiudades() {
+		return ciudades;
+	}
+
+	public void setCiudades(List<Ciudad> ciudades) {
+		this.ciudades = ciudades;
+	}
 
 	public String getNombre() {
 		return nombre;

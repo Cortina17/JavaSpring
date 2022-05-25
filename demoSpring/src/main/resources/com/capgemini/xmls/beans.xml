@@ -47,20 +47,48 @@
 	<!-- <property name="nombre" value="Dublin"></property> -->
 	<!-- </bean> -->
 
-	<bean id="persona" class="com.capgemini.beans.Persona" name="personaName">
+	<!-- <bean id="persona" class="com.capgemini.beans.Persona" name="personaName"> -->
+	<!-- <property name="id" value="1"></property> -->
+	<!-- <property name="nombre" value="Joe"></property> -->
+	<!-- <property name="apodo" value="J"></property> -->
+	<!-- <property name="pais"> -->
+	<!-- <bean id="pais" class="com.capgemini.beans.Pais"> -->
+	<!-- <property name="nombre" value="Suecia"></property> -->
+	<!-- <property name="ciudad"> -->
+	<!-- <bean id="ciudad" class="com.capgemini.beans.Ciudad"> -->
+	<!-- <property name="nombre" value="Estocolmo"></property> -->
+	<!-- </bean> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+
+	<!-- Guia7 Colecciones -->
+	<bean id="persona" class="com.capgemini.beans.Persona">
 		<property name="id" value="1"></property>
-		<property name="nombre" value="Joe"></property>
-		<property name="apodo" value="J"></property>
-		<property name="pais">
-			<bean id="pais" class="com.capgemini.beans.Pais">
-				<property name="nombre" value="Suecia"></property>
-				<property name="ciudad">
-					<bean id="ciudad" class="com.capgemini.beans.Ciudad">
-						<property name="nombre" value="Estocolmo"></property>
-					</bean>
-				</property>
-			</bean>
+		<property name="nombre" value="Esmirnoff"></property>
+		<property name="apodo" value="Miri"></property>
+		<property name="pais" ref="pais"></property>
+	</bean>
+	<bean id="pais" class="com.capgemini.beans.Pais">
+		<property name="nombre" value="Argentina"></property>
+		<property name="ciudades">
+			<list>
+				<ref bean="ciudad"></ref>
+				<ref bean="ciudad1"></ref>
+				<ref bean="ciudad2"></ref>
+			</list>
 		</property>
 	</bean>
+	<bean id="ciudad" class="com.capgemini.beans.Ciudad">
+		<property name="nombre" value="Chubut"></property>
+	</bean>
+	<bean id="ciudad1" class="com.capgemini.beans.Ciudad">
+		<property name="nombre" value="Buenos Aires"></property>
+	</bean>
+	<bean id="ciudad2" class="com.capgemini.beans.Ciudad">
+		<property name="nombre" value="Cordoba"></property>
+	</bean>
+
 	<alias name="persona" alias="personaAlias"></alias>
 </beans>
