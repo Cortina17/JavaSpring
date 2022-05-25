@@ -22,6 +22,8 @@ public class App {
 				+ ", su apodo es " + p.getApodo() + ",\n su pais es " + p.getPais().getNombre()
 				+ ", y vive en " + p.getPais().getCiudad().getNombre() + ".");
 
+		Persona p2 = (Persona) appContext.getBean("personaAlias");
+		
 		((ConfigurableApplicationContext) appContext).close();
 	}
 
