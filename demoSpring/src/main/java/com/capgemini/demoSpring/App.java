@@ -18,12 +18,22 @@ public class App {
 
 		Persona p = (Persona) appContext.getBean("persona");
 
-		System.out.println("El ID de la persona es el " + p.getId() + ", su nombre es " + p.getNombre()
-				+ ", su apodo es " + p.getApodo() + ",\n su pais es " + p.getPais().getNombre()
-				+ ", y vive en " + p.getPais().getCiudad().getNombre() + ".");
+		System.out.println("(By ID del bean) El ID de la persona es el " + p.getId() + ", su nombre es " + p.getNombre()
+				+ ", su apodo es " + p.getApodo() + ",\n su pais es " + p.getPais().getNombre() + ", y vive en "
+				+ p.getPais().getCiudad().getNombre() + ".");
 
 		Persona p2 = (Persona) appContext.getBean("personaAlias");
-		
+
+		System.out.println("(By Alias) El ID de la persona es el " + p2.getId() + ", su nombre es " + p2.getNombre()
+				+ ", su apodo es " + p2.getApodo() + ",\n su pais es " + p2.getPais().getNombre() + ", y vive en "
+				+ p2.getPais().getCiudad().getNombre() + ".");
+
+		Persona p3 = (Persona) appContext.getBean("personaAlias");
+
+		System.out.println("(By name tag en el bean) El ID de la persona es el " + p3.getId() + ", su nombre es " + p3.getNombre()
+				+ ", su apodo es " + p3.getApodo() + ",\n su pais es " + p3.getPais().getNombre() + ", y vive en "
+				+ p3.getPais().getCiudad().getNombre() + ".");
+
 		((ConfigurableApplicationContext) appContext).close();
 	}
 

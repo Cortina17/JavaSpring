@@ -47,7 +47,7 @@
 	<!-- <property name="nombre" value="Dublin"></property> -->
 	<!-- </bean> -->
 
-	<bean id="persona" class="com.capgemini.beans.Persona">
+	<bean id="persona" class="com.capgemini.beans.Persona" name="personaName">
 		<property name="id" value="1"></property>
 		<property name="nombre" value="Joe"></property>
 		<property name="apodo" value="J"></property>
