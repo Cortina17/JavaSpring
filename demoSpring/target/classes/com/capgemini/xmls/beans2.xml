@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="person" class="com.capgemini.beans.Person"
-		autowire="byName">
+		autowire="byName" scope="singleton" lazy-init="true">
 		<property name="id" value="323222"></property>
 		<property name="nombre" value="William"></property>
 		<property name="apodo" value="Will"></property>
