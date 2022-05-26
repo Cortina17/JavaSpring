@@ -22,7 +22,7 @@ public class App {
 		System.out.println(p);
 		System.out.println(p.getApodo());
 
-		System.out.println("Su apodo es " + p.getApodo() + " y su pais es " + p.getPais().getNombre() + ".");
+		System.out.println("Su apodo es " + p.getApodo() + ", su ciudad " + p.getCiudad().getNombre() + " y su pais es " + p.getPais().getNombre() + ".");
 		
 		((ConfigurableApplicationContext) appContext).close();
 	}

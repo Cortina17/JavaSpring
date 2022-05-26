@@ -6,7 +6,16 @@ public class Person {
 	private String nombre;
 	private String apodo;
 	private Pais Pais;
+	private Ciudad ciudad;
 	
+	public Ciudad getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(Ciudad ciudad) {
+		this.ciudad = ciudad;
+	}
+
 	private void init() {
 		System.out.println("antes de iniciar el bean");
 	}
