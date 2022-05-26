@@ -2,14 +2,8 @@ package com.capgemini.demoSpring;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.capgemini.beans.AppConfig;
-import com.capgemini.beans.AppConfig2;
 import com.capgemini.beans.Ciudad;
-import com.capgemini.beans.HolaMundo;
-import com.capgemini.beans.IEquipo;
 import com.capgemini.beans.Jugador;
 import com.capgemini.beans.Person;
 import com.capgemini.beans.Persona;
