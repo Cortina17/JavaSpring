@@ -21,14 +21,13 @@ public class App {
 
 		Jugador j = (Jugador) appContext.getBean("messi");
 		Jugador j1 = (Jugador) appContext.getBean("benzema");
-	
-		System.out.println(j.getNombre() + ", " + j.getId() + ", " + j.getEquipo().mostrar()) ;
-		System.out.println(j1.getNombre() + ", " + j1.getId() + ", " + j1.getEquipo().mostrar()) ;
+
+		System.out.println(j.getNombre() + ", " + j.getId() + ", " + j.getEquipo().mostrar());
+		System.out.println(j1.getNombre() + ", " + j1.getId() + ", " + j1.getEquipo().mostrar());
 
 		((ConfigurableApplicationContext) appContext).close();
 	}
 
-	
 	public static void main2(String[] args) {
 
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
@@ -40,8 +39,9 @@ public class App {
 
 		System.out.println(c.getNombre());
 
-		System.out.println("Su apodo es " + p.getApodo() + ", su ciudad " + p.getNombre() + " y su pais es " + p.getPais().getNombre() + ".");
-		
+		System.out.println("Su apodo es " + p.getApodo() + ", su ciudad " + p.getNombre() + " y su pais es "
+				+ p.getPais().getNombre() + ".");
+
 		((ConfigurableApplicationContext) appContext).close();
 	}
 
