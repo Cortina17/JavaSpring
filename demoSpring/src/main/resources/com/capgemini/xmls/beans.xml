@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	default-init-method="init" default-destroy-method="destroy">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="person" class="com.capgemini.beans.Person"
-		autowire="byName" init-method="init" destroy-method="destroy">
-		<property name="apodo" value="Ire"></property>
+	<bean id="benzema" class="com.capgemini.beans.Jugador">
+		<property name="id" value="9"></property>
+		<property name="nombre" value="Karim Benzema"></property>
+		<property name="equipo" ref="Real Madrid"></property>
 	</bean>
 
-	<bean id="pais" class="com.capgemini.beans.Pais" autowire="byName">
-		<property name="nombre" value="Irlanda"></property>
+	<bean id="messi" class="com.capgemini.beans.Jugador">
+		<property name="id" value="10"></property>
+		<property name="nombre" value="Lionel Messi"></property>
+		<property name="equipo" ref="PSG"></property>
 	</bean>
 
-	<bean id="ciudad" class="com.capgemini.beans.Ciudad">
-		<property name="nombre" value="Dublin"></property>
-	</bean>
-
+	<bean id="PSG" class="com.capgemini.beans.PSG"></bean>
+	<bean id="Real Madrid" class="com.capgemini.beans.RealMadrid"></bean>
+	
 </beans>

@@ -1,13 +1,19 @@
 package com.capgemini.beans;
 
-public class Persona {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+import jakarta.annotation.PostConstruct;
+
+public class Persona implements InitializingBean, DisposableBean {
 
 	private int id;
 	private String nombre;
 	private String apodo;
 	private Pais pais;
 
-	public Persona() {};
+	public Persona() {
+	};
 
 	public Persona(int id, String nombre, String apodo) {
 		this.id = id;
@@ -53,5 +59,22 @@ public class Persona {
 
 	public void setPais(Pais pais) {
 		this.pais = pais;
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+	@PostConstruct
+	private void init() {
+		System.out.println("antes de iniciar el bean per");
 	}
 }

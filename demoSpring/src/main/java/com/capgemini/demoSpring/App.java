@@ -9,6 +9,8 @@ import com.capgemini.beans.AppConfig;
 import com.capgemini.beans.AppConfig2;
 import com.capgemini.beans.Ciudad;
 import com.capgemini.beans.HolaMundo;
+import com.capgemini.beans.IEquipo;
+import com.capgemini.beans.Jugador;
 import com.capgemini.beans.Person;
 import com.capgemini.beans.Persona;
 
@@ -17,16 +19,28 @@ public class App {
 
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
 
-		Person p = (Person) appContext.getBean("person");
+		Jugador j = (Jugador) appContext.getBean("messi");
+		Jugador j1 = (Jugador) appContext.getBean("benzema");
+	
+		System.out.println(j.getNombre() + ", " + j.getId() + ", " + j.getEquipo().mostrar()) ;
+		System.out.println(j1.getNombre() + ", " + j1.getId() + ", " + j1.getEquipo().mostrar()) ;
+
+		((ConfigurableApplicationContext) appContext).close();
+	}
+
+	
+	public static void main2(String[] args) {
+
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
+
+		Persona p = (Persona) appContext.getBean("persona");
 		Ciudad c = (Ciudad) appContext.getBean("ciudad");
 
-		System.out.println(p);
 		System.out.println(p.getApodo());
-		
-		System.out.println(c);
+
 		System.out.println(c.getNombre());
 
-		System.out.println("Su apodo es " + p.getApodo() + ", su ciudad " + p.getCiudad().getNombre() + " y su pais es " + p.getPais().getNombre() + ".");
+		System.out.println("Su apodo es " + p.getApodo() + ", su ciudad " + p.getNombre() + " y su pais es " + p.getPais().getNombre() + ".");
 		
 		((ConfigurableApplicationContext) appContext).close();
 	}
