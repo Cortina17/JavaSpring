@@ -17,11 +17,11 @@ public class Person {
 	}
 
 	private void init() {
-		System.out.println("antes de iniciar el bean");
+		System.out.println("antes de iniciar el bean per");
 	}
 	
 	private void destroy() {
-		System.out.println("apunto de destruir el bean");
+		System.out.println("apunto de destruir el bean per");
 	}
 	
 	public int getId() {

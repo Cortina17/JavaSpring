@@ -18,9 +18,13 @@ public class App {
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
 
 		Person p = (Person) appContext.getBean("person");
+		Ciudad c = (Ciudad) appContext.getBean("ciudad");
 
 		System.out.println(p);
 		System.out.println(p.getApodo());
+		
+		System.out.println(c);
+		System.out.println(c.getNombre());
 
 		System.out.println("Su apodo es " + p.getApodo() + ", su ciudad " + p.getCiudad().getNombre() + " y su pais es " + p.getPais().getNombre() + ".");
 		
