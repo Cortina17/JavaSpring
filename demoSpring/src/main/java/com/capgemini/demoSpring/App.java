@@ -13,8 +13,21 @@ import com.capgemini.beans.Person;
 import com.capgemini.beans.Persona;
 
 public class App {
-
 	public static void main(String[] args) {
+
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
+
+		Person p = (Person) appContext.getBean("person");
+
+		System.out.println(p);
+		System.out.println(p.getApodo());
+
+		System.out.println("Su apodo es " + p.getApodo() + " y su pais es " + p.getPais().getNombre() + ".");
+		
+		((ConfigurableApplicationContext) appContext).close();
+	}
+
+	public static void main1(String[] args) {
 
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans2.xml");
 
@@ -25,7 +38,7 @@ public class App {
 		System.out.println(p1);
 
 		System.out.println("El ID de la persona es el " + p.getId() + ", su nombre es " + p.getNombre()
-				+ ", su apodo es " + p.getApodo() + " y su pais es " + p.getCountry().getNombre() + ".");
+				+ ", su apodo es " + p.getApodo() + " y su pais es " + p.getPais().getNombre() + ".");
 
 		((ConfigurableApplicationContext) appContext).close();
 

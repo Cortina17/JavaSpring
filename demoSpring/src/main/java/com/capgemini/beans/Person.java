@@ -5,7 +5,15 @@ public class Person {
 	private int id;
 	private String nombre;
 	private String apodo;
-	private Country Country;
+	private Pais Pais;
+	
+	private void init() {
+		System.out.println("antes de iniciar el bean");
+	}
+	
+	private void destroy() {
+		System.out.println("apunto de destruir el bean");
+	}
 	
 	public int getId() {
 		return id;
@@ -25,11 +33,14 @@ public class Person {
 	public void setApodo(String apodo) {
 		this.apodo = apodo;
 	}
-	public Country getCountry() {
-		return Country;
+
+	public Pais getPais() {
+		return Pais;
 	}
-	public void setCountry(Country country) {
-		Country = country;
+
+	public void setPais(Pais pais) {
+		Pais = pais;
 	}
+
 
 }
