@@ -13,11 +13,15 @@ public class App {
 
 		ApplicationContext appContext = new ClassPathXmlApplicationContext("com/capgemini/xmls/beans.xml");
 
-		Jugador j = (Jugador) appContext.getBean("messi");
-		Jugador j1 = (Jugador) appContext.getBean("benzema");
+//		Jugador j = (Jugador) appContext.getBean("messi");
+//		Jugador j1 = (Jugador) appContext.getBean("benzema");
+		Jugador j2 = (Jugador) appContext.getBean("pique");
 
-		System.out.println(j.getNombre() + ", " + j.getId() + ", " + j.getEquipo().mostrar());
-		System.out.println(j1.getNombre() + ", " + j1.getId() + ", " + j1.getEquipo().mostrar());
+
+//		System.out.println(j.getNombre() + ", " + j.getId() + ", " + j.getEquipo().mostrar());
+//		System.out.println(j1.getNombre() + ", " + j1.getId() + ", " + j1.getEquipo().mostrar());
+		System.out.println(j2.getNombre() + ", " + j2.getId() + ", " + j2.getEquipo().mostrar());
+
 
 		((ConfigurableApplicationContext) appContext).close();
 	}

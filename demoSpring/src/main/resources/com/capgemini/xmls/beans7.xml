@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="benzema" class="com.capgemini.beans.Jugador">
+		<property name="id" value="9"></property>
+		<property name="nombre" value="Karim Benzema"></property>
+		<property name="equipo" ref="Real Madrid"></property>
+	</bean>
+
+	<bean id="messi" class="com.capgemini.beans.Jugador">
+		<property name="id" value="10"></property>
+		<property name="nombre" value="Lionel Messi"></property>
+		<property name="equipo" ref="PSG"></property>
+	</bean>
+
+	<bean id="pique" class="com.capgemini.beans.Jugador">
+		<property name="id" value="5"></property>
+		<property name="nombre" value="Gerard Pique"></property>
+		<property name="equipo" ref="Barcelona"></property>
+	</bean>
+
+	<bean id="PSG" class="com.capgemini.beans.PSG"></bean>
+	<bean id="Real Madrid" class="com.capgemini.beans.RealMadrid"></bean>
+	<bean id="Barcelona" class="com.capgemini.beans.Barcelona"></bean>
+
+
+</beans>
